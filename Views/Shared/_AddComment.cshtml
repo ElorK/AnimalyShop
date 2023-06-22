@@ -1,0 +1,7 @@
+﻿@model ProjectASP.NET.Models.Comment
+<form asp-controller="Animal" asp-action="AddComment" method="post">
+    <input asp-for="CommentText"/>
+    <input asp-for="AnimalId" hidden />
+    <span asp-validation-for="CommentText"></span>
+    <input type="submit" value="Submit" class="btn btn-primary" />
+</form>

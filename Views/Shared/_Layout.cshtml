@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/styles/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container bg-opacity-25 bg-secondary bg-gradient">
+        <div class="@ViewBag.AlertState fade" role="alert">
+            @ViewBag.Alert
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1>Animaly Shop</h1>
+                <h2>Exotic and common animals in one place</h2>
+            </div>
+            <div class="container-fluid mt-2 mb-2">
+                <nav class="navbar navbar-expand-lg bg-primary bg-gradient rounded-2">
+                    <a class="navbar-brand text-light p-2" asp-controller="Home" asp-action="Index">Animaly Shop</a>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link text-light" asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" asp-controller="Home" asp-action="Catalogue">Catalogue</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" asp-controller="Home" asp-action="Admin">Admin</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="row">
+            @RenderBody()
+        </div>
+    </div>
+    <script src="~/scripts/jquery.js"></script>
+    <script src="~/scripts/bootstrap.js"></script>
+    <script src="~/scripts/popper.js"></script>
+    <script src="~/scripts/jquery.validate.min.js"></script>
+    <script src="~/scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/scripts/myscripts.js"></script>
+</body>
+</html>

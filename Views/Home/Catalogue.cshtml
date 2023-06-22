@@ -1,0 +1,36 @@
+﻿@model IEnumerable<ProjectASP.NET.Models.Animal>
+@{
+    ViewBag.Title = "Catalogue";
+    var categories = new SelectList(ViewBag.Categories, "CategoryId", "Name");
+}
+
+<h1>Catalogue</h1>
+<p>
+    Welcome our animal catalogue!<br />
+    You may use the filter to filter out our animals by category.<br />
+    If any animal catches your eye, feel free to to press the "Details" button for more information.
+</p>
+<form asp-action="Catalogue">
+    @Html.DropDownList("CategoryId", categories, "Show All", new { onChange = "this.form.submit()" })
+</form>
+<div class="row">
+    <div class="row mb-2 mt-2">
+        <div class="col h5">Image</div>
+        <div class="col h5">Name</div>
+        <div class="col h5">More Details</div>
+    </div>
+    @foreach (var animal in Model)
+    {
+        <div class="row mb-1 mt-1">
+            <div class="col">
+                <img width="200" src="@animal.ImageSrc">
+            </div>
+            <div class="col">
+                @animal.Name
+            </div>
+            <div class="col">
+                <a class="btn btn-primary" role="button" asp-controller="Animal" asp-action="Index" asp-route-id=@animal.AnimalId>Details</a>
+            </div>
+        </div>
+    }
+</div>

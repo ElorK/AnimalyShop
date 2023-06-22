@@ -1,0 +1,55 @@
+﻿@model ProjectASP.NET.Models.Animal
+@{
+    ViewBag.Title = "Edit Animal";
+    var categories = new SelectList(ViewBag.Categories, "CategoryId", "Name");
+}
+
+<h1>Edit Animal</h1>
+<p>
+    Here you can edit an existing animal.<br />
+    Please do not try to insert any funny inputs.
+</p>
+<div class="container container-fluid p-5">
+        <form asp-action="Edit" method="post" enctype="multipart/form-data">
+            <input asp-for="@Model.AnimalId" type="hidden" />
+            <input asp-for="@Model.ImageSrc" type="hidden" />
+            <div class="row">
+                <div class="col-6">
+                    <lable id="imgPrev">Image Upade<br /><img id="prev" width="400" src="@Model.ImageSrc" /></lable>
+                    <input id="imgUp" type="file" accept=".png, .jpg, .jpeg" name="imgFile" style="display:none" />
+                </div>
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-4">
+                            <label asp-for="@Model.Name"></label><br />
+                            <input asp-for="@Model.Name" /><br />
+                            <span asp-validation-for="@Model.Name"></span>
+                        </div>
+                        <div class="col-4">
+                            <label asp-for="@Model.Age"></label><br />
+                            <input asp-for="@Model.Age" /><br />
+                            <span asp-validation-for="@Model.Age"></span>
+                        </div>
+                        <div class="col-4">
+                            <label asp-for="@Model.Category"></label><br />
+                            <select asp-for="@Model.CategoryId" asp-items="@categories"></select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label asp-for="@Model.Description"></label><br />
+                            <textarea asp-for="@Model.Description"></textarea><br />
+                            <span asp-validation-for="@Model.Description"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input type="submit" value="Submit" class="btn btn-primary align-self-end" />
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    <div>
+        <a class="btn btn-primary m-2" asp-controller="Home" asp-action="Admin" role="button">Back</a>
+    </div>
+</div>

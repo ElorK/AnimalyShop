@@ -1,0 +1,36 @@
+﻿@using ProjectASP.NET.Models;
+@model ProjectASP.NET.Models.Animal
+@{
+    ViewBag.Title = Model.Name;
+}
+<h1>@Model.Name</h1>
+<div class="row">
+    <div class="col">
+        <img class="img-fluid w-100" src="@Model.ImageSrc" />
+    </div>
+    <div class="col">
+        <h3 class="row p-2 mb-2 bg-primary text-white">Details</h3>
+        <div class="row bg-dark bg-opacity-25 p-2"><b>Name</b></div>
+        <div class="row p-2">@Model.Name</div>
+        <div class="row bg-dark bg-opacity-25 p-2"><b>Age</b></div>
+        <div class="row p-2">@Model.Age</div>
+        <div class="row bg-dark bg-opacity-25 p-2"><b>Category</b></div>
+        <div class="row p-2">@Model.Category!.Name</div>
+        <div class="row bg-dark bg-opacity-25 p-2"><b>Description</b></div>
+        <div class="row p-2">@Model.Description</div>
+        <div class="row">
+            <h3 class="p-2 mb-2 bg-primary text-white">Comments</h3>
+            @foreach (var comment in ViewBag.Comments)
+            {
+                <div class="row">@comment.CommentText</div>
+                <hr />
+            }
+            <div class="row">
+                <partial name="_AddComment" model="new Comment {AnimalId = Model.AnimalId}" />
+            </div>
+        </div>
+    </div>
+    <div>
+        <a class="btn btn-primary m-2" asp-controller="Home" asp-action="Catalogue" role="button">Back</a>
+    </div>
+</div>

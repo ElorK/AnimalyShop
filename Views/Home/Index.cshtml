@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ProjectASP.NET.Models.Animal>
+@{
+    ViewBag.Title = "Home";
+}
+<h1>Home</h1>
+<p>Welcome to the home page of Animaly Shop!<br />
+    Here you can see the top 2 animals in terms of comment numbers.<br />
+    If people talk about them so much, maybe you should check them out ;)</p>
+<div class="row">
+    <div class="row mb-2 mt-2">
+        <div class="col h5">Image</div>
+        <div class="col h5">Name</div>
+        <div class="col h5">Description</div>
+        <div class="col h5">Number of Comments</div>
+    </div>
+    @foreach (var animal in Model)
+    {
+        <div class="row mb-2 mt-2">
+            <div class="col">
+                <img width="200" src="@animal.ImageSrc">
+            </div>
+            <div class="col">
+                @animal.Name
+            </div>
+            <div class="col">
+                @animal.Description
+            </div>
+            <div class="col">
+                @animal.Comments!.Count
+            </div>
+        </div>
+    }
+</div>

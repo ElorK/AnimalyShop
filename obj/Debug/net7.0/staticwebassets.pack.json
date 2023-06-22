@@ -1,0 +1,69 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\otosh\\OneDrive\\שולחן העבודה\\Elor\\Sela\\ASP.NET\\ProjectASP.NET\\wwwroot\\images\\catImage.jpeg",
+      "PackagePath": "staticwebassets\\images\\catImage.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\otosh\\OneDrive\\שולחן העבודה\\Elor\\Sela\\ASP.NET\\ProjectASP.NET\\wwwroot\\images\\cobraImage.jpeg",
+      "PackagePath": "staticwebassets\\images\\cobraImage.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\otosh\\OneDrive\\שולחן העבודה\\Elor\\Sela\\ASP.NET\\ProjectASP.NET\\wwwroot\\images\\dogImage.jpeg",
+      "PackagePath": "staticwebassets\\images\\dogImage.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\otosh\\OneDrive\\שולחן העבודה\\Elor\\Sela\\ASP.NET\\ProjectASP.NET\\wwwroot\\images\\pythonImage.jpeg",
+      "PackagePath": "staticwebassets\\images\\pythonImage.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\otosh\\OneDrive\\שולחן העבודה\\Elor\\Sela\\ASP.NET\\ProjectASP.NET\\wwwroot\\images\\upload.png",
+      "PackagePath": "staticwebassets\\images\\upload.png"
+    },
+    {
+      "Id": "C:\\Users\\otosh\\OneDrive\\שולחן העבודה\\Elor\\Sela\\ASP.NET\\ProjectASP.NET\\wwwroot\\scripts\\bootstrap.js",
+      "PackagePath": "staticwebassets\\scripts\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\otosh\\OneDrive\\שולחן העבודה\\Elor\\Sela\\ASP.NET\\ProjectASP.NET\\wwwroot\\scripts\\jquery.js",
+      "PackagePath": "staticwebassets\\scripts\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\otosh\\OneDrive\\שולחן העבודה\\Elor\\Sela\\ASP.NET\\ProjectASP.NET\\wwwroot\\scripts\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\scripts\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\otosh\\OneDrive\\שולחן העבודה\\Elor\\Sela\\ASP.NET\\ProjectASP.NET\\wwwroot\\scripts\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\scripts\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\otosh\\OneDrive\\שולחן העבודה\\Elor\\Sela\\ASP.NET\\ProjectASP.NET\\wwwroot\\scripts\\myscripts.js",
+      "PackagePath": "staticwebassets\\scripts\\myscripts.js"
+    },
+    {
+      "Id": "C:\\Users\\otosh\\OneDrive\\שולחן העבודה\\Elor\\Sela\\ASP.NET\\ProjectASP.NET\\wwwroot\\scripts\\popper.js",
+      "PackagePath": "staticwebassets\\scripts\\popper.js"
+    },
+    {
+      "Id": "C:\\Users\\otosh\\OneDrive\\שולחן העבודה\\Elor\\Sela\\ASP.NET\\ProjectASP.NET\\wwwroot\\styles\\bootstrap.css",
+      "PackagePath": "staticwebassets\\styles\\bootstrap.css"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.ProjectASP.NET.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.ProjectASP.NET.props",
+      "PackagePath": "build\\ProjectASP.NET.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.ProjectASP.NET.props",
+      "PackagePath": "buildMultiTargeting\\ProjectASP.NET.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.ProjectASP.NET.props",
+      "PackagePath": "buildTransitive\\ProjectASP.NET.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

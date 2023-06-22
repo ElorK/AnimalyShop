@@ -1,0 +1,42 @@
+﻿@model IEnumerable<ProjectASP.NET.Models.Animal>
+@{
+    ViewBag.Title = "Admin";
+    var categories = new SelectList(ViewBag.Categories, "CategoryId", "Name");
+}
+    <h1>Admin</h1>
+    <p>
+        Welcome, Admin.<br />
+        Here you can add, edit and delete animal pages.
+    </p>
+    <div class="row">
+        <div class="col-8">
+            <form asp-action="Admin">
+                @Html.DropDownList("CategoryId", categories, "Show All", new { onChange = "this.form.submit()" })
+            </form>
+        </div>
+        <div class="col-4">
+            <a class="btn btn-primary" role="button" asp-controller="Admin" asp-action="Add">Add Animal</a>
+        </div>
+    </div>
+    <div class="row">
+    <div class="row mb-2 mt-2">
+            <div class="col h5">Image</div>
+            <div class="col h5">Name</div>
+            <div class="col h5">Actions</div>
+        </div>
+        @foreach (var animal in Model)
+        {
+        <div class="row mb-1 mt-1">
+                <div class="col">
+                    <img width="200" src="@animal.ImageSrc">
+                </div>
+                <div class="col">
+                    @animal.Name
+                </div>
+                <div class="col">
+                    <a class="btn btn-primary" role="button" asp-controller="Admin" asp-action="Edit" asp-route-id=@animal.AnimalId>Edit</a>
+                    <a class="btn btn-danger" role="button" asp-controller="Admin" asp-action="Delete" asp-route-id=@animal.AnimalId>Delete</a>
+                </div>
+            </div>
+        }
+    </div>
